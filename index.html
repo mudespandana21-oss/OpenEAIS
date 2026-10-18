@@ -1,3 +1,6 @@
+Here is the complete updated code for index.html with the live Render WebSocket URL integrated, sir:
+
+```html
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
@@ -244,7 +247,7 @@
           <div id="gemmaConsole" role="log" aria-live="polite"
                class="console h-[300px] sm:h-[340px] overflow-y-auto p-3 font-mono text-[12.5px] leading-relaxed text-emerald-400 bg-black">
             <div class="cl dim">openeais-supervisor v0.1 · Gemma edge agent</div>
-            <div class="cl dim">&gt; binding telemetry stream ws://127.0.0.1:8000/ws/telemetry</div>
+            <div class="cl dim">&gt; binding telemetry stream wss://openeais.onrender.com/ws/telemetry</div>
             <div class="cl dim">&gt; status: AWAITING TELEMETRY</div>
             <div id="gemmaPrompt" class="cl mt-2">$ <span class="cursor"></span></div>
           </div>
@@ -261,7 +264,7 @@
 
     <footer class="mt-6 flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono text-slate-500 border-t border-slate-800 pt-4">
       <span>OpenEAIS — Hackathon Action Plan &amp; Winning Blueprint</span>
-      <span id="footStats">ws://127.0.0.1:8000/ws/telemetry · frames 0 · —</span>
+      <span id="footStats">wss://openeais.onrender.com/ws/telemetry · frames 0 · —</span>
     </footer>
   </main>
 
@@ -269,7 +272,7 @@
   (() => {
     'use strict';
 
-    const WS_URL = 'ws://127.0.0.1:8000/ws/telemetry';
+    const WS_URL = 'wss://openeais.onrender.com/ws/telemetry';
     const MAX_TOF_POINTS = 300;
     const MAX_CONSOLE_NODES = 300;
 
@@ -867,3 +870,4 @@
   </script>
 </body>
 </html>
+
