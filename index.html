@@ -757,8 +757,6 @@
       ws.onopen = () => {
         retry = 0; wasConnected = true; loggedDown = false; state.wsOpen = true;
         setWs('live', 'LIVE');
-        stopDemo();
-        $('demoBtn').disabled = true;
         logSys(`WebSocket connected → ${WS_URL}`);
       };
       ws.onmessage = (ev) => {
@@ -769,7 +767,6 @@
       ws.onerror = () => {};
       ws.onclose = () => {
         state.wsOpen = false;
-        $('demoBtn').disabled = false;
         setWs('down', 'DISCONNECTED');
         if (wasConnected && !loggedDown) { logSys('WebSocket link lost — retrying…'); loggedDown = true; }
         scheduleReconnect();
@@ -829,7 +826,7 @@
     }
 
     function startDemo() {
-      if (demo.timer || state.wsOpen) return;
+      if (demo.timer) return;
       demo.timer = setInterval(() => ingest(makeDemoFrame()), 700);
       const b = $('demoBtn'); b.textContent = 'DEMO FEED: ON'; b.classList.add('on');
       logSys('demo feed started (synthetic frames)');
@@ -867,4 +864,3 @@
   </script>
 </body>
 </html>
-
