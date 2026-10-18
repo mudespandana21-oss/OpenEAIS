@@ -1,0 +1,10 @@
+name: openeais-app
+region: blr1
+static_sites:
+- name: openeais
+  environment_slug: html
+  github:
+    repo: mudespandana21-oss/OpenEAIS
+    branch: main
+    deploy_on_push: true
+  source_dir: /
