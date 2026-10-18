@@ -8,3 +8,4 @@ Technical Architecture & Telemetry Pipeline 1. In-Situ Sensing Modalities: Dual-
 | **Speed Advantage Ratio** | 50x faster[cite: 6] | Relative speed compared to traditional thermal diffusion[cite: 6] |
 | **Memory Footprint** | 1.4 KB SRAM / 15.1 KB Flash[cite: 6] | Minimal footprint for bare-metal quantized INT8 deployment[cite: 6] |
 | **Classification Accuracy** | 100.0%[cite: 6] | Zero false activations under heavy 20 kHz PWM noise[cite: 6] |
+
